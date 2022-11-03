@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=dwm
+Comment=This session starts dwm
+Exec=/usr/local/bin/dwm-start
+TryExec=/usr/local/bin/dwm-start
+Type=Application
+DesktopNames=DWM
+X-GDM-SessioningRegisters=true
+
