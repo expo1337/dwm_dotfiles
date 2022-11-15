@@ -1,0 +1,9 @@
+#!/bin/sh
+
+#start dwm after loop
+xrandr --output DP-2 --rate 144 --mode 1920x1080 --primary --right-of DP-4 &
+xrandr --output DP-4 --mode 1920x1200 --left-of DP-2 &
+exec /usr/local/bin/dwm > /dev/null &
+exec dwmblocks &
+exec picom
+

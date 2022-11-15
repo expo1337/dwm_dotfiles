@@ -1,0 +1,6 @@
+#!/bin/bash
+
+CPU=$(top -bn1 | grep Cpu | awk '{print $2}')%
+
+echo -n " $CPU"
+
