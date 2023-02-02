@@ -1,0 +1,38 @@
+ncmpcpp_directory = "~/.config/ncmpcpp"
+lyrics_directory = "~/.local/share/lyrics"
+mpd_music_dir = "~/Music"
+
+message_delay_time = "1"
+autocenter_mode = "yes"
+centered_cursor = "yes"
+ignore_leading_the = "yes"
+allow_for_physical_item_deletion = "no"
+
+progressbar_look 			= "▂▂▂"
+progressbar_color 			= "black"
+progressbar_elapsed_color   = "cyan"
+
+
+alternative_header_first_line_format  = $b$5$/b  $b{%t}|{%f}$/b $/b 
+alternative_header_second_line_format = {$b{$2ﴁ  %a$9}{ - $3  %b$9}{ $4[  %y]}}|{%D}
+
+startup_screen = browser
+display_volume_level = yes
+external_editor = nvim
+use_console_editor = yes
+
+colors_enabled = "yes"
+main_window_color = "white"
+header_window_color = "cyan"
+volume_color = "cyan"
+statusbar_color = "cyan"
+empty_tag_color = "magenta"
+statusbar_time_color = "cyan:b"
+
+user_interface = "alternative"
+
+visualizer_data_source = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_in_stereo = "yes"
+visualizer_type = "spectrum"
+visualizer_look = "+█"

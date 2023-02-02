@@ -1,8 +1,0 @@
-#!/bin/bash
-# Get free output on memory
-output=$(free -h | grep Mem)
-# Assign values based on different places in output
-MEMUSED=$(echo $output | awk '{print $3}')
-MEMTOTAL=$(echo $output | awk '{print $2}')
-# Output Vars
-echo -n " $MEMUSED/$MEMTOTAL"

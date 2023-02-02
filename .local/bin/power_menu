@@ -1,0 +1,15 @@
+!/bin/sh
+
+case "$(readlink -f /sbin/init)" in
+	*systemd*) ctl='systemctl' ;;
+	*) ctl='loginctl' ;;
+esac
+
+case "$(printf "襤 Shutdown\nﰇ Reboot\n鈴 Sleep\n Logout\n Lock" | dmenu)" in
+	'襤 Shutdown') $ctl poweroff ;;
+	'ﰇ Reboot') $ctl reboot ;;
+	'鈴 Sleep') slock & $ctl suspend ;;
+	' Logout') killall xinit ;;
+	' Lock') slock ;;
+	*) exit 1 ;;
+esac

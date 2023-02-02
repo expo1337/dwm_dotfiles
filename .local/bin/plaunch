@@ -1,0 +1,31 @@
+#!/bin/sh
+# Program launch script
+
+if [ "$(hostnamectl hostname)" == "Helios" ];
+then
+        case $1 in
+                -y)virt-manager;;
+                -u)gimp;;
+                -i)kdenlive;;
+                -o)blender;;
+                -p)steam;;
+        esac
+elif [ "$(hostnamectl hostname)" == "Morpheus" ];
+then
+        case $1 in
+                -y)dolphin-emu;;
+                -u)retroarch;;
+                -i)duckstation;;
+                -o)mupen64plus-qt;;
+                -p)steam;;
+        esac
+elif [ "$(hostnamectl hostname)" == "Daedalus" ];
+then
+        case $1 in
+                -y)krita;;
+#                -u);;
+#                -i);;
+#                -o);;
+#                -p);;
+        esac
+fi

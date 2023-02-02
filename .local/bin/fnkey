@@ -1,0 +1,55 @@
+#!/bin/sh
+# Function key script 
+
+volnotify() {
+	volume=$(pamixer --get-volume)
+        printf "墳\n" | dnote -id vol -pbar $volume 100
+}
+
+mpdnotify() {
+	mpdvolume=$(mpc status %volume%)
+        printf "\n" | dnote -id mpvol -pbar $mpdvolume 100
+}
+
+brightnotify() {
+	bright=$(brightnessctl g)
+        printf "\n" | dnote -id bright -pbar $bright 255
+}
+
+case $1 in
+-vt)
+	pamixer -t
+	if $(pamixer --get-mute); then
+	        printf "婢\n" | dnote -id vol -pbar 0 100	
+	else
+		volnotify
+	fi
+        ;;
+-vd)
+	pamixer -u
+	pamixer -d 5
+	volnotify $1
+	;;
+-vi)
+	pamixer -u
+	pamixer -i 5
+	volnotify $1
+	;;
+-md)
+	mpc volume -5
+	mpdnotify $1
+	;;
+-mi)
+	mpc volume +5
+	mpdnotify $1
+	;;
+-bd)
+        brightnessctl s 15-
+	brightnotify $1
+	;;
+-bi)
+        brightnessctl s +15
+	brightnotify $1
+	;;
+esac
+

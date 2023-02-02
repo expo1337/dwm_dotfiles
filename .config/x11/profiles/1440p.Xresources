@@ -1,0 +1,49 @@
+#include "xcolors"
+
+! Used by dwm and dmenu
+*font: Hack:size=12
+*icons: SymbolsNerdFont:size=15
+*user_bh: 50
+*vertpad: 14
+*sidepad: 14
+
+! dwm
+*gappx: 14
+*vertpadbar: 0
+*horizpadbar: 8
+*borderpx: 3
+*ulinepad: 6
+*ulinestroke: 3
+*ulinevoffset: 3
+
+! dmenu
+*centered: 1
+*fuzzy: 0
+*min_width: 1280
+*lines: 12
+
+! st
+*stfont: Anonymous Pro:size=17
+*sticons: SymbolsNerdFont:size=14
+*stborderpx: 40
+*alpha: 0.7
+*cols: 120
+*rows: 36
+
+! dnoted
+*dnotedfont: Hack:size=16
+*dnotedicons: SymbolsNerdFont:size=22
+*def_min_width: 300
+*text_padding: 24
+*contents_padding_vertical: 0
+*bar_outer_padding: 8   
+*bar_inner_padding: 5
+*border_padding: 110
+*inter_padding: 26
+
+! Type of subpixel antialiasing (none, rgb, bgr, vrgb or vbgr) and dpi
+Xft.rgba: rgba
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.autohint: 0
+Xft.dpi: 114

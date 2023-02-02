@@ -1,0 +1,24 @@
+set drawbox
+set icons
+set preview
+set ignorecase
+set cleaner '~/.config/lf/cleaner'
+set previewer '~/.config/lf/scope'
+
+cmd setwallpaper %ln -sf "$f" ~/.config/x11/wall && xwallpaper --zoom "$f" > /dev/null 2>&1
+cmd unarchive ${{
+  case "$f" in
+      *.zip) unzip "$f" ;;
+      *.rar) unrar x -ad "$f" ;;
+      *.7z) 7z x "$f" ;;
+      *.tar.gz) tar -xzvf "$f" ;;
+      *.tar.bz2) tar -xjvf "$f" ;;
+      *.tar) tar -xvf "$f" ;;
+      *) echo "Unsupported format" ;;
+  esac
+}}
+
+
+map W setwallpaper  
+map g top
+map au unarchive

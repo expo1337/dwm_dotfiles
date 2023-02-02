@@ -1,0 +1,89 @@
+# Programs spawns
+
+super + Return
+  st
+
+super + shift + Return
+  [ -z "$(tmux list-clients)" ] && st -e tmux attach || st
+
+super + w
+  librewolf || brave --force-device-scale-factor=1.25
+
+super + e
+  thunar
+
+super + shift + e
+  st -c "Lf,Lf" -e lfub
+
+super + ctrl + e
+  dmenu_open
+
+super + r
+  dmenu_run 
+
+super + y
+  plaunch -y
+
+super + u
+  plaunch -u
+
+super + i
+  plaunch -i
+
+super + o
+  plaunch -o
+
+super + p
+  plaunch -p
+
+# System control
+
+super + shift + r
+  samde_menu
+
+super + Escape
+  power_menu
+
+super + ctrl + b
+  dmenu-bluetooth
+
+super + ctrl + r
+  samde_menu -r
+
+super + ctrl + c
+  samde_menu -c
+
+super + c
+  pgrep picom > /dev/null && killall picom || picom &
+
+super + shift + q
+  xkill
+
+super + control + q
+  pgrep dwm > /dev/null && killall dwm && dwm &
+
+super + Delete
+  slock
+
+super + alt + r
+  pkill -USR1 -x sxhkd
+
+# Audio control
+
+XF86Audio{Mute,LowerVolume,RaiseVolume}
+  fnkey {-vt,-vd,-vi}
+
+shift + XF86Audio{LowerVolume,RaiseVolume}
+  fnkey {-md,-mi}
+
+XF86Audio{Prev,Play,Next}
+  mpc {prev,toggle,next}
+
+shift + XF86Audio{Prev,Next}
+  mpc seek {-2,+2}
+
+XF86MonBrightness{Down,Up}
+  fnkey {-bd,-bi}
+
+super + shift + t
+  echo " $(mpc current)" | dnote -loc 5 -id current_track
