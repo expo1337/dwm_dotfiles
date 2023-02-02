@@ -96,6 +96,14 @@ rice(){
                         sed -i 's/gtk-theme-name=.*/gtk-theme-name=Materia-dark/' $gtk
                         papirus-folders -C blue
                         ;;
+		'Catppuccin')
+			xwallpaper --zoom $walldir/catppuccin.png
+			ln -sf $col/Catppuccin.Xresources $xcol
+			ln -sf $walldir/catppuccin.png $wall
+			rload -s
+			sed -i 's/gtk-theme-name=.*/gtk-theme-name=Catppuccin-dark' $gtk
+			papirus-folders -C purple
+			;;
         	*) exit 1 ;;
         esac
 }
