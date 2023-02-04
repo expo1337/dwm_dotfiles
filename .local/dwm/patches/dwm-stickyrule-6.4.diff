@@ -1,0 +1,45 @@
+diff --git a/config.def.h b/config.def.h
+index 610e5b8..b7cb695 100644
+--- a/config.def.h
++++ b/config.def.h
+@@ -26,9 +26,9 @@ static const Rule rules[] = {
+ 	 *	WM_CLASS(STRING) = instance, class
+ 	 *	WM_NAME(STRING) = title
+ 	 */
+-	/* class      instance    title       tags mask     isfloating   monitor */
+-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
++	/* class      instance    title       tags mask     isfloating    issticky   monitor */
++	{ "Gimp",     NULL,       NULL,       0,            1,            0,         -1 },
++	{ "Firefox",  NULL,       NULL,       1 << 8,       0,            0,         -1 },
+ };
+ 
+ /* layout(s) */
+diff --git a/dwm.c b/dwm.c
+index 5410104..5331c63 100644
+--- a/dwm.c
++++ b/dwm.c
+@@ -138,6 +138,7 @@ typedef struct {
+ 	const char *title;
+ 	unsigned int tags;
+ 	int isfloating;
++        int issticky;
+ 	int monitor;
+ } Rule;
+ 
+@@ -288,6 +289,7 @@ applyrules(Client *c)
+ 
+ 	/* rule matching */
+ 	c->isfloating = 0;
++	c->issticky = 0;
+ 	c->tags = 0;
+ 	XGetClassHint(dpy, c->win, &ch);
+ 	class    = ch.res_class ? ch.res_class : broken;
+@@ -300,6 +302,7 @@ applyrules(Client *c)
+ 		&& (!r->instance || strstr(instance, r->instance)))
+ 		{
+ 			c->isfloating = r->isfloating;
++			c->issticky = r->issticky;
+ 			c->tags |= r->tags;
+ 			for (m = mons; m && m->num != r->monitor; m = m->next);
+ 			if (m)
