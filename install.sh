@@ -32,7 +32,7 @@ ln -sf $HOME/.local/share/wallpapers/Luna.png $HOME/.config/x11/wall
 # Move source of suckless stuff and compile
 for i in "${utils[@]}"
 do
-    cp -r .local/$i .local/src/$i
+    cp -r .local/src/$i $HOME/.local/src/$i
     sudo make install -C $HOME/.local/src/$i
 done
 
