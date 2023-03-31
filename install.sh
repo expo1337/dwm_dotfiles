@@ -62,4 +62,9 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 nvim -c "PlugInstall|q|q"
 
+# Add desktop and dw-run script
+cp dwm.desktop /usr/share/xsessions/dwm.desktop
+cp dwm-run /usr/share/xsessions/dwm-run 
+chmod +x /usr/share/xsessions/dwm-run
+
 printf "Phew! Done installing :3"

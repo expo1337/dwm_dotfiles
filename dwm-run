@@ -1,0 +1,15 @@
+#!/bin/sh
+
+xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$! 
+[ -n "$xrdbpid" ] && wait "$xrdbpid"
+xrandr --output DP-2 --mode 1920x1080 --rate 144 --primary --right-of DP-4 &
+xrandr --output DP-4 --mode 1920x1200 --left-of DP-2 &
+xwallpaper --zoom $HOME/.config/x11/wall & 
+xset r rate 400 30 &
+picom &
+mpd &
+dwm &
+sxhkd &
+slstatus &
+dnoted &
+unclutter 

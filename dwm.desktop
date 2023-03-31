@@ -1,0 +1,7 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=dwm
+Comment=Starts dwm
+Exec=/usr/share/xsessions/dwm-run
+Type=Application
+X-GDM-SessionRegisters=true
