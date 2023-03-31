@@ -12,7 +12,7 @@ sudo sed -i "s/-j2/-j$(nproc)/;/^#MAKEFLAGS/s/^#//" /etc/makepkg.conf
 
 # Installs programs in pkg.txt
 sudo pacman -Syu --noconfirm
-sudo pacman --noconfirm --needed -S - < pkgs.txt || error "Failed to install packages"
+sudo pacman --noconfirm --needed -S - < pkgs || error "Failed to install packages"
 
 # Makes zsh the default shell
 sudo usermod -s /bin/zsh $USER
