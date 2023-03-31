@@ -2,12 +2,19 @@
 configs=(gtk-3.0 htop lf lvim mpd mpv ncmcpp neofetch nitrogen nvim papirus-folders picom starship.toml sxhkd Thunar tmux user-dirs.dirs user-dirs.locale wget x11 zsh xfce4)
 utils=(dwm dmenu st slstatus dnote slock)
 folders=(.local .config .cache/zsh .cache/mpd .local/share/themes .local/src)
-
+bins=(dmenu-bluetooth dmenu_open fnkey lfub lvim papirus-folders plaunch power_menu samde_menu)
 # Remove current .config
 for i in "${configs[@]}"
 do
-    rm -rf $i
+    rm -rf $HOME/.config/$i
 done
+
+# Upadte scripts
+for i in "${bins[@]}"
+do
+    rm $HOME/.local/bin/$i
+done
+cp .local/bin/* $HOME/.local/bin/
 
 # Copy all folders in .config
 cp -r .config/* $HOME/.config/
@@ -28,9 +35,11 @@ do
     sudo make clean install -C $HOME/.local/src/$i
 done
 
-# Install yay aur helper
-git clone https://aur.archlinux.org/yay-bin
-cd yay-bin && makepkg -si && cd .. && rm -rf yay-bin
-yay -S devour nsxiv librewolf-bin
+sudo rm /usr/share/xsessions/dwm.desktop
+sudo rm /usr/share/xsessions/dwm-run
+sudo cp dwm.desktop /usr/share/xsessions/
+sudo cp dwm-run /usr/share/xsessions/
+sudo chmod +x /usr/share/xsessions/dwm-run
+
 
 printf "Phew! Done installing :3"

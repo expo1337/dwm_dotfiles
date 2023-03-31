@@ -16,42 +16,42 @@ super + shift + e
   st -c "Lf,Lf" -e lfub
 
 super + ctrl + e
-  dmenu_open
+  ~/.local/bin/dmenu_open
 
 super + r
-  dmenu_run 
+  ~/.local/bin/dmenu_run 
 
 super + y
-  plaunch -y
+  ~/.local/bin/plaunch -y
 
 super + u
-  plaunch -u
+  ~/.local/bin/plaunch -u
 
 super + i
-  plaunch -i
+  ~/.local/bin/plaunch -i
 
 super + o
-  plaunch -o
+  ~/.local/bin/plaunch -o
 
 super + p
-  plaunch -p
+  ~/.local/bin/plaunch -p
 
 # System control
 
 super + shift + r
-  samde_menu
+  ~/.local/bin/samde_menu
 
 super + Escape
-  power_menu
+  ~/.local/bin/power_menu
 
 super + ctrl + b
-  dmenu-bluetooth
+  ~/.local/bin/dmenu-bluetooth
 
 super + ctrl + r
-  samde_menu -r
+  ~/.local/bin/samde_menu -r
 
 super + ctrl + c
-  samde_menu -c
+  ~/.local/bin/samde_menu -c
 
 super + c
   pgrep picom > /dev/null && killall picom || picom &
