@@ -41,5 +41,5 @@ sudo cp dwm.desktop /usr/share/xsessions/
 sudo cp dwm-run /usr/share/xsessions/
 sudo chmod +x /usr/share/xsessions/dwm-run
 
-
-printf "Phew! Done installing :3"
+clear
+printf "Phew! Done updating :3"

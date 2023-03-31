@@ -19,7 +19,7 @@ super + ctrl + e
   ~/.local/bin/dmenu_open
 
 super + r
-  ~/.local/bin/dmenu_run 
+  dmenu_run 
 
 super + y
   ~/.local/bin/plaunch -y
