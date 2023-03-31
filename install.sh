@@ -24,10 +24,12 @@ cp -r .config/* $HOME/.config/
 # Set Colorscheme + xresources
 ln -sf $HOME/.config/x11/profiles/1080p.Xresources $HOME/.config/x11/xresources
 ln -sf $HOME/.config/x11/colorschemes/Luna.Xresources $HOME/.config/x11/xcolors
-
+#
 # Clone wallpapers
-git clone --depth 1 https://gitlab.com/samdenton/wallpapers.git $HOME/.local/share/wallpapers
-ln -sf $HOME/.local/share/wallpapers/Luna.png $HOME/.config/x11/wall
+#git clone --depth 1 https://gitlab.com/samdenton/wallpapers.git $HOME/.local/share/wallpapers
+#ln -sf $HOME/.local/share/wallpapers/Luna.png $HOME/.config/x11/wall
+mkdir $HOME/.wallpapers
+mv wallpapers/* $HOME/.wallpapers
 
 # Move source of suckless stuff and compile
 for i in "${utils[@]}"

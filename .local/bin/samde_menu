@@ -7,7 +7,7 @@ profiles="$HOME/.config/x11/profiles"
 wall="$HOME/.config/x11/wall"
 gtk="$HOME/.config/gtk-3.0/settings.ini"
 pic="$HOME/.config/picom/picom.conf"
-walldir="$HOME/.local/share/wallpapers"
+walldir="$HOME/.wallpapers"
 
 rload(){
         xrdb merge $xres
@@ -63,7 +63,7 @@ pywal() {
 }
 
 rice(){
-        case "$(printf "Luna\nRose\nEverforest\nNord" | dmenu)" in
+        case "$(printf "Luna\nRose\nEverforest\nNord\nCatppuccin" | dmenu)" in
                 'Luna') 
                         xwallpaper --zoom $walldir/luna.png
                         ln -sf $col/Kasugano.Xresources $xcol
@@ -73,7 +73,7 @@ rice(){
                         papirus-folders -C indigo
                         ;;
                 'Rose')
-                        xwallpaper --zoom $walldir/rose.jpg
+                        xwallpaper --zoom $walldir/rose-pine-moon.jpg
                         ln -sf $col/Rose-Pine-Moon.Xresources $xcol
                         ln -sf $walldir/rose.jpg $wall 
                         rload -s

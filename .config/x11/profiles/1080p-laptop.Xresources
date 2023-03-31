@@ -1,8 +1,8 @@
 #include "xcolors"
 
 ! Used by dwm and dmenu
-*font: JetBrainsMono Nerd Font:size=12
-*icons: SymbolsNerdFont:size=15
+*font: JetBrains Mono NL:size=12
+*icons: SymbolsNerdFont:size=18
 *user_bh: 30
 !*vertpad: 10
 !*sidepad: 10
@@ -26,7 +26,7 @@
 *lines: 10
 
 ! st
-*stfont: JetBrainsMono Nerd Font Mono:size=12
+*stfont: Hack:size=16
 *sticons: SymbolsNerdFont:size=14
 *stborderpx: 40
 *alpha: 0.7
@@ -34,7 +34,7 @@
 *rows: 30
 
 ! dnoted
-*dnotedfont: JetBrainsMono Nerd Font:size=16
+*dnotedfont: JetBrains Mono NL:size=16
 *dnotedicons: SymbolsNerdFont:size=22
 *def_min_width: 225
 *text_padding: 20
