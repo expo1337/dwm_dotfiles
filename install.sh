@@ -63,9 +63,9 @@ nvim -c "PlugInstall|q|q"
 # Move scrips
 cp .local/bin/* $HOME/.local/bin/
 # Add desktop and dw-run script
-mkdir -p /usr/share/xsessions
-cp dwm.desktop /usr/share/xsessions/dwm.desktop
-cp dwm-run /usr/share/xsessions/dwm-run 
-chmod +x /usr/share/xsessions/dwm-run
+sudo mkdir -p /usr/share/xsessions
+sudo cp dwm.desktop /usr/share/xsessions/dwm.desktop
+sudo cp dwm-run /usr/share/xsessions/dwm-run 
+sudo chmod +x /usr/share/xsessions/dwm-run
 
 printf "Phew! Done installing :3"
