@@ -39,7 +39,7 @@ super + p
 # System control
 
 super + shift + r
-  ~/.local/bin/samde_menu
+  ~/.local/bin/rice_menu
 
 super + Escape
   ~/.local/bin/power_menu
@@ -48,10 +48,10 @@ super + ctrl + b
   ~/.local/bin/dmenu-bluetooth
 
 super + ctrl + r
-  ~/.local/bin/samde_menu -r
+  ~/.local/bin/rice_menu -r
 
 super + ctrl + c
-  ~/.local/bin/samde_menu -c
+  ~/.local/bin/rice_menu -c
 
 super + c
   pgrep picom > /dev/null && killall picom || picom &

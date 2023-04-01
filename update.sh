@@ -2,7 +2,7 @@
 configs=(gtk-3.0 htop lf lvim mpd mpv ncmcpp neofetch nitrogen nvim papirus-folders picom starship.toml sxhkd Thunar tmux user-dirs.dirs user-dirs.locale wget x11 zsh xfce4)
 utils=(dwm dmenu st slstatus dnote slock)
 folders=(.local .config .cache/zsh .cache/mpd .local/share/themes .local/src)
-bins=(dmenu-bluetooth dmenu_open fnkey lfub lvim papirus-folders plaunch power_menu samde_menu)
+bins=(dmenu-bluetooth dmenu_open fnkey lfub lvim papirus-folders plaunch power_menu rice_menu)
 # Remove current .config
 for i in "${configs[@]}"
 do

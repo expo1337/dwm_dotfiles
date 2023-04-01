@@ -1,7 +1,7 @@
 #!/bin/bash
 
 utils=(dwm dmenu st slstatus dnote slock)
-folders=(.local .config .cache/zsh .cache/mpd .local/share/themes .local/src)
+folders=(.local .config .cache/zsh .cache/mpd .local/share/themes .local/src .local/bin)
 
 # Checks for folders and creates them if absent
 for i in "${folders[@]}"; do [ -d $HOME/$i ] || mkdir -p $HOME/$i; done
@@ -26,8 +26,6 @@ ln -sf $HOME/.config/x11/profiles/1080p.Xresources $HOME/.config/x11/xresources
 ln -sf $HOME/.config/x11/colorschemes/Luna.Xresources $HOME/.config/x11/xcolors
 #
 # Clone wallpapers
-#git clone --depth 1 https://gitlab.com/samdenton/wallpapers.git $HOME/.local/share/wallpapers
-#ln -sf $HOME/.local/share/wallpapers/Luna.png $HOME/.config/x11/wall
 mkdir $HOME/.wallpapers
 mv wallpapers/* $HOME/.wallpapers
 
