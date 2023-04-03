@@ -21,7 +21,7 @@ cp -r .config/* $HOME/.config/
 
 # Remove wallpapers and get new ones
 rm $HOME/.wallpapers/*
-mv wallpapers/* $HOME/.wallpapers
+cp wallpapers/* $HOME/.wallpapers
 
 # Move source of suckless stuff and compile
 for i in "${utils[@]}"
