@@ -68,4 +68,6 @@ sudo cp dwm.desktop /usr/share/xsessions/dwm.desktop
 sudo cp dwm-run /usr/share/xsessions/dwm-run 
 sudo chmod +x /usr/share/xsessions/dwm-run
 
+clear
+neofetch
 printf "Phew! Done installing :3"

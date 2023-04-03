@@ -42,4 +42,5 @@ sudo cp dwm-run /usr/share/xsessions/
 sudo chmod +x /usr/share/xsessions/dwm-run
 
 clear
+neofetch
 printf "Phew! Done updating :3"
