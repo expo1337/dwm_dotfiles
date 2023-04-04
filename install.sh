@@ -55,6 +55,11 @@ git clone --depth 1 https://github.com/Fausto-Korpsvart/Everforest-GTK-Theme.git
 mv Everforest-GTK-Theme/themes/Everforest-Dark-BL $HOME/.local/share/themes
 rm -rf Everforest-GTK-Theme
 
+git clone --depth 1 https://github.com/TheGreatMcPain/gruvbox-material-gtk.git
+mv gruvbox-material-gtk/themes/Gruvbox-Material-Dark $HOME/.local/share/themes
+rm -rf gruvbox-material-gtk
+
+yay -S catppuccin-gtk-theme-frappe
 # Installs vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

@@ -63,7 +63,7 @@ pywal() {
 }
 
 rice(){
-        case "$(printf "Luna\nRose\nEverforest\nNord\nCatppuccin" | dmenu)" in
+        case "$(printf "Luna\nRose\nEverforest\nNord\nCatppuccin\nGruvbox" | dmenu)" in
                 'Luna') 
                         xwallpaper --zoom $walldir/luna.png
                         ln -sf $col/Kasugano.Xresources $xcol
@@ -101,9 +101,15 @@ rice(){
 			ln -sf $col/Catppuccin.Xresources $xcol
 			ln -sf $walldir/catppuccin.png $wall
 			rload -s
-			sed -i 's/gtk-theme-name=.*/gtk-theme-name=Catppuccin-dark' $gtk
+			sed -i 's/gtk-theme-name=.*/gtk-theme-name=Catppuccin-Frappe-Standard-Lavender-Dark' $gtk
 			papirus-folders -C purple
 			;;
+                'Gruvbox')
+                        xwallpaper --zoom $walldir/gruvbox.png
+                        ln -sf $col/Gruvbox-Dark.Xresources $xcol
+                        ln -sf $walldir/gruvbox.png $wall
+                        rload -s 
+                        sed -i 's/gtk-theme-name=.*/gtk-theme-name=Gruvbox-Material-Dark' $gtk
         	*) exit 1 ;;
         esac
 }

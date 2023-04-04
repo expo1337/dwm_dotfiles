@@ -15,6 +15,8 @@ sxhkd
 xdotool
 xorg-xkill
 xorg-xev
+xorg
+xorg-xinit
 
 zsh
 zsh-syntax-highlighting
