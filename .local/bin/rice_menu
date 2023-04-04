@@ -110,6 +110,7 @@ rice(){
                         ln -sf $walldir/gruvbox.png $wall
                         rload -s 
                         sed -i 's/gtk-theme-name=.*/gtk-theme-name=Gruvbox-Material-Dark' $gtk
+                        ;;
         	*) exit 1 ;;
         esac
 }
