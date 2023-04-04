@@ -17,6 +17,7 @@ xorg-xkill
 xorg-xev
 xorg
 xorg-xinit
+flameshot
 
 zsh
 zsh-syntax-highlighting

@@ -68,6 +68,8 @@ super + Delete
 super + alt + r
   pkill -USR1 -x sxhkd
 
+super + shift + s
+  flameshot gui
 # Audio control
 
 XF86Audio{Mute,LowerVolume,RaiseVolume}
