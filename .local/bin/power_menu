@@ -9,7 +9,7 @@ case "$(printf "襤 Shutdown\nﰇ Reboot\n鈴 Sleep\n Logout\n Lock" | dme
 	'襤 Shutdown') $ctl poweroff ;;
 	'ﰇ Reboot') $ctl reboot ;;
 	'鈴 Sleep') slock & $ctl suspend ;;
-	' Logout') killall xinit ;;
+	' Logout') killall xinit & killall dwm-run ;;
 	' Lock') slock ;;
 	*) exit 1 ;;
 esac
