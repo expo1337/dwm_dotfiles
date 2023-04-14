@@ -73,10 +73,10 @@ super + shift + s
 # Audio control
 
 XF86Audio{Mute,LowerVolume,RaiseVolume}
-  fnkey {-vt,-vd,-vi}
+  ~/.local/bin/fnkey {-vt,-vd,-vi}
 
 shift + XF86Audio{LowerVolume,RaiseVolume}
-  fnkey {-md,-mi}
+  ~/.local/bin/fnkey {-md,-mi}
 
 XF86Audio{Prev,Play,Next}
   mpc {prev,toggle,next}
@@ -85,7 +85,7 @@ shift + XF86Audio{Prev,Next}
   mpc seek {-2,+2}
 
 XF86MonBrightness{Down,Up}
-  fnkey {-bd,-bi}
+  ~/.local/bin/fnkey {-bd,-bi}
 
 super + shift + t
   echo " $(mpc current)" | dnote -loc 5 -id current_track
