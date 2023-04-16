@@ -23,6 +23,11 @@ cp -r .config/* $HOME/.config/
 rm $HOME/.wallpapers/*
 cp wallpapers/* $HOME/.wallpapers
 
+# Set Colorscheme + xresources
+ln -sf $HOME/.config/x11/profiles/1080p.Xresources $HOME/.config/x11/xresources
+ln -sf $HOME/.config/x11/colorschemes/Luna.Xresources $HOME/.config/x11/xcolors
+
+
 # Move source of suckless stuff and compile
 for i in "${utils[@]}"
 do 
