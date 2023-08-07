@@ -1,0 +1,52 @@
+#include "xcolors"
+
+! Used by dwm and dmenu
+*font: JetBrains Mono NL:size=10
+*icons: SymbolsNerdFont:size=10
+*user_bh: 30
+!*vertpad: 10
+!*sidepad: 10
+! NO GAPS
+*vertpad: 0
+*sidepad: 0
+
+! dwm
+*gappx: 10
+*vertpadbar: 0
+*horizpadbar: 0
+*borderpx: 2
+*ulinepad: 5
+*ulinestroke: 2
+*ulinevoffset: 2
+
+! dmenu
+*centered: 1
+*fuzzy: 0
+*min_width: 840
+*lines: 10
+
+! st
+*stfont: Hack:size=10
+*sticons: SymbolsNerdFont:size=10
+*stborderpx: 40
+*alpha: 0.7
+*cols: 98
+*rows: 30
+
+! dnoted
+*dnotedfont: JetBrains Mono NL:size=16
+*dnotedicons: SymbolsNerdFont:size=22
+*def_min_width: 225
+*text_padding: 20
+*contents_padding_vertical: 0
+*bar_outer_padding: 7   
+*bar_inner_padding: 4
+*border_padding: 90
+*inter_padding: 20
+
+! Type of subpixel antialiasing (none, rgb, bgr, vrgb or vbgr) and dpi
+Xft.rgba: rgba
+Xft.antialias: 1
+Xft.hinting: 1
+Xft.autohint: 0
+Xft.dpi: 90
