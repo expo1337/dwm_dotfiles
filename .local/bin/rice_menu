@@ -111,7 +111,15 @@ rice(){
                         rload -s 
                         sed -i 's/gtk-theme-name=.*/gtk-theme-name=Gruvbox-Material-Dark' $gtk
                         ;;
-        	*) exit 1 ;;
+        	'Kuromi')
+			xwallpaper --zoom $walldir/kuromi.png
+			ln -sf $col/Cyberpunk.Xresources $xcol
+			ln -sf $walldir/kuromi.png $wall
+			rload -s
+			sed -i 's/gtk-theme-name=.*/gtk-theme-name=Catppuccin-Frappe-Standard-Lavender-Dark' $gtk
+			papirus-folders -C purple
+			;;
+		*) exit 1 ;;
         esac
 }
 
