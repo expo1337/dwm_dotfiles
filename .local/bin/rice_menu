@@ -63,7 +63,7 @@ pywal() {
 }
 
 rice(){
-        case "$(printf "Luna\nRose\nEverforest\nNord\nCatppuccin\nGruvbox" | dmenu)" in
+        case "$(printf "Luna\nRose\nEverforest\nNord\nCatppuccin\nGruvbox\nKuromi" | dmenu)" in
                 'Luna') 
                         xwallpaper --zoom $walldir/luna.png
                         ln -sf $col/Kasugano.Xresources $xcol
